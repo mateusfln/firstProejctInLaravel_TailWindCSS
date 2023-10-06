@@ -1,5 +1,6 @@
 <x-layout title="Nova Série">
     <form action="" method="post">
+        @csrf
         <div class="flex flex-col items-center">
             <label 
                 class="my-10" 

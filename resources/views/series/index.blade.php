@@ -1,5 +1,5 @@
 <x-layout title="Séries">
-    <a class="text-purple-900 underline pb-4" href="/series/criar">Adicionar Série</a>
+    <form class="text-purple-900 underline pb-4" href="/series/salvar" method="post">Adicionar Série</form>
 
     <ul>
         

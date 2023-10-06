@@ -36,7 +36,9 @@ class SeriesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $nomeSerie = $request->input('nome');
+        
     }
 
     /**
