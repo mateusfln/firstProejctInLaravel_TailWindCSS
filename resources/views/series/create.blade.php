@@ -1,5 +1,5 @@
 <x-layout title="Nova Série">
-    <form action="" method="post">
+    <form action="/series/salvar" method="post">
         @csrf
         <div class="flex flex-col items-center">
             <label 
@@ -14,12 +14,9 @@
                 type="text" 
                 id="nome" 
                 name="nome"
+                required
             >
             <button class="mt-10 bg-green-200 p-4 rounded-3xl" type="submit" >Adicionar</button>
         </div>
-
-        
-      
-
      </form>
 </x-layout>

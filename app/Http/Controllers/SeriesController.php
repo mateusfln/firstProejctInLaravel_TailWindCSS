@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Serie;
 use Illuminate\Http\Request;
 
 class SeriesController extends Controller
@@ -9,16 +10,13 @@ class SeriesController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request)
+    public function index()
     {
-        $series =[
-            'serieTesteNumero1',
-            'serieTesteNumero2',
-            'serieTesteNumero3'
-        ];
+        $series = Serie::all();
+        
 
 
-        return view('series.index', compact('series'));
+        return view('series.index')->with('series', $series);
         //return$series;
     
     }
@@ -36,8 +34,12 @@ class SeriesController extends Controller
      */
     public function store(Request $request)
     {
-
+        
         $nomeSerie = $request->input('nome');
+        $serie = new Serie();
+        $serie->nome = $nomeSerie;
+        $serie->save();
+        return redirect('/series');
         
     }
 
@@ -68,8 +70,9 @@ class SeriesController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy()
     {
-        //
+       
+
     }
 }
