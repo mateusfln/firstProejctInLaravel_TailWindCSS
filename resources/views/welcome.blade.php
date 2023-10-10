@@ -23,7 +23,7 @@
             ao aplicativo de cadastro de series!
         </h1>
         
-        <a href="/series" class="mt-14 rounded-3xl bg-slate-300 p-2 text-zinc-700 ">Clique aqui para Iniciar</a>
+        <a href="{{route('series.index')}}" class="mt-14 rounded-3xl bg-slate-300 p-2 text-zinc-700 ">Clique aqui para Iniciar</a>
 
     </body>
 </html>

@@ -35,11 +35,12 @@ class SeriesController extends Controller
     public function store(Request $request)
     {
         
-        $nomeSerie = $request->input('nome');
-        $serie = new Serie();
-        $serie->nome = $nomeSerie;
-        $serie->save();
-        return redirect('/series');
+        // $nomeSerie = $request->input('nome');
+        // $serie = new Serie();
+        // $serie->nome = $nomeSerie;
+        // $serie->save();
+        Serie::create($request->all());
+        return to_route('series.index');
         
     }
 
@@ -70,9 +71,10 @@ class SeriesController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy()
+    public function destroy(Request $request)
     {
-       
+        Serie::destroy($request->serie);
+        return to_route('series.index');
 
     }
 }

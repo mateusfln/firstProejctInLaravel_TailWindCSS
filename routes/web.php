@@ -18,7 +18,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/series', [SeriesController::class, 'index']);
-Route::get('/series/criar', [SeriesController::class, 'create']);
-Route::post('/series/salvar', [SeriesController::class, 'store']);
+
+Route::controller(SeriesController::class)->group(function(){
+
+    Route::get('/series', 'index')->name('series.index');
+    Route::get('/series/create', 'create')->name('series.create');
+    Route::post('/series/store', 'store')->name('series.store');
+    Route::delete('/series/destroy/{serie}', 'destroy')->name('series.destroy');
+    
+    
+
+});
 
