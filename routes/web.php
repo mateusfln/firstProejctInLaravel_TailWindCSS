@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\SeriesController;
+use App\Http\Controllers\ItemsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,6 +19,6 @@ Route::get('/', function () {
 });
 
 
-Route::resource('/series', SeriesController::class)
+Route::resource('/items', ItemsController::class)
     ->except(['show']);
 

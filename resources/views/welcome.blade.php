@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         @vite('resources/css/app.css')
-        <title>Laravel</title>
+        <title>App</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -24,10 +24,10 @@
             Bem vindo!
         </h1>
         <h1 class="text-3xl font-bold text-black">
-            ao aplicativo de cadastro de séries!
+            ao To-Do!
         </h1>
         
-        <a href="{{route('series.index')}}" class="mt-14 rounded-3xl bg-green-300 p-2 text-zinc-700 shadow-lg">Clique aqui para Iniciar</a>
+        <a href="{{route('items.index')}}" class="mt-14 rounded-3xl bg-green-300 p-2 text-zinc-700 shadow-lg">Clique aqui para Iniciar</a>
 
 
         </div>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite('resources/css/app.css')
 
-    <title>{{$title}} -Controle de Séries</title>
+    <title>{{$title}} -To-do</title>
 </head>
 <body>
     <div class="w-screen h-screen flex flex-col justify-center items-center bg-zinc-200">
