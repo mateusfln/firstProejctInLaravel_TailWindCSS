@@ -8,13 +8,15 @@
     <title>{{$title}} -Controle de Séries</title>
 </head>
 <body>
-    <div class="w-screen h-screen flex flex-col justify-center items-center">
+    <div class="w-screen h-screen flex flex-col justify-center items-center bg-zinc-200">
 
-    
-    <h1 class="text-5xl font-bold mb-5">{{$title}}</h1>
+    <div class="bg-zinc-50 p-20 rounded-md shadow-xl my-5 flex flex-col justify-center items-center">
+    <h1 class="text-5xl font-bold my-5">{{$title}}</h1>
 
     {{ $slot }}
-    
+
+    </div>
+   
 
     </div>
     
